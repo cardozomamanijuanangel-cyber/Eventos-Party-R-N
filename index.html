@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Party Eventos - Catálogo</title>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+
+  <header>
+    <img src="IMG/logo-removebg-preview.png" class="logo-tienda" alt="Logo Party Eventos">
+    <nav>
+      <a href="#catalogo">CATÁLOGO</a>
+      <a href="#contacto">CONTACTO</a>
+    </nav>
+  </header>
+
+  <!-- MENSAJE DE BIENVENIDA -->
+  <section class="mensaje-bienvenida" id="catalogo">
+    <!-- Tarjeta 15 años -->
+    <div class="invitacion_15">
+      <div class="contenido_15">
+        <div class="cinta_15">
+          <div class="cinta-track">
+            <img src="IMG/151.png" onclick="abrirModal(this.src)">
+            <img src="IMG/152.png" onclick="abrirModal(this.src)">
+            <img src="IMG/151.png" onclick="abrirModal(this.src)">
+            <img src="IMG/152.png" onclick="abrirModal(this.src)">
+          </div>
+        </div>
+        <div class="bloque-inferior_15">
+          <h1>15 años de ensueño</h1>
+          <div class="parrafo_15">
+            <p>Convierte tu fiesta de 15 años en un evento inolvidable con nuestras decoraciones elegantes y
+              personalizadas. Creamos ambientes únicos para que tu celebración sea recordada por siempre.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjeta Bautizo -->
+    <div class="tarjeta_bautizo">
+      <div class="contenido_bautizo">
+        <div class="cinta_bautizo">
+          <div class="cinta-track">
+            <img src="IMG/bautizo1.png" onclick="abrirModal(this.src)">
+            <img src="IMG/bautizo2.png" onclick="abrirModal(this.src)">
+            <img src="IMG/bautizo3.png" onclick="abrirModal(this.src)">
+            <img src="IMG/bautizo4.png" onclick="abrirModal(this.src)">
+            <img src="IMG/bautizo1.png" onclick="abrirModal(this.src)">
+            <img src="IMG/bautizo2.png" onclick="abrirModal(this.src)">
+            <img src="IMG/bautizo3.png" onclick="abrirModal(this.src)">
+            <img src="IMG/bautizo4.png" onclick="abrirModal(this.src)">
+          </div>
+        </div>
+        <div class="texto_bautizo">
+          <h1>Mi Bautizo</h1>
+          <div class="parrafo_bautizo">
+            <p>Celebra este día tan especial con una decoración delicada y llena de encanto. Creamos ambientes
+              elegantes y personalizados para que el bautizo de tu pequeño sea un recuerdo inolvidable para
+              toda
+              la familia.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjeta Boda -->
+    <div class="invitacion_boda">
+      <div class="contenido_boda">
+        <!-- 1. CINTA (Mismo formato que las otras) -->
+        <div class="cinta_boda">
+          <div class="cinta-track">
+            <img src="IMG/boda1.png" onclick="abrirModal(this.src)">
+            <img src="IMG/boda2.png" onclick="abrirModal(this.src)">
+            <img src="IMG/boda3.png" onclick="abrirModal(this.src)">
+            <img src="IMG/boda4.png" onclick="abrirModal(this.src)">
+            <img src="IMG/boda5.png" onclick="abrirModal(this.src)">
+            <img src="IMG/boda6.png" onclick="abrirModal(this.src)">
+            <!-- Repite las necesarias -->
+          </div>
+        </div>
+
+        <!-- 2. CONTENIDO (Imagen central + Texto) -->
+        <div class="bloque-inferior_boda">
+          <div class="texto-inferior_boda">
+            <h1>Boda de Ensueño</h1>
+            <div class="parrafo_boda">
+              <p>Convierte tu boda en un momento inolvidable con nuestras decoraciones elegantes y personalizadas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Si quieres la flor lateral, ponla al final de este bloque, pero te sugiero quitarla para que sea igual a las otras tarjetas -->
+    </div>
+    <!-- Tarjeta Graduación -->
+    <div class="tarjeta-graduacion">
+      <div class="contenido_graduacion"><!-- ... contenido de graduación ... -->
+        <div class="cinta_graduacion">
+          <div class="cinta-track">
+            <img src="IMG/graduacion1.png" onclick="abrirModal(this.src)">
+            <img src="IMG/graduacion1.png" onclick="abrirModal(this.src)">
+          </div>
+        </div>
+      </div>
+
+      <div class="texto-graduacion">
+        <h1>Gran Graduación</h1>
+        <div class="parrafo-graduacion">
+          <p>Celebra tu graduación con una decoración elegante y personalizada. Creamos ambientes únicos para hacer de
+            este gran logro un momento inolvidable junto a familiares y amigos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL ÚNICO (Solo debe existir uno al final) -->
+  <div id="modal" onclick="this.style.display='none'">
+    <img id="modal-img">
+  </div>
+
+  <script>
+    function abrirModal(src) {
+      const modal = document.getElementById('modal');
+      const modalImg = document.getElementById('modal-img');
+      modal.style.display = 'flex';
+      modalImg.src = src;
+    }
+  </script>
+
+  <!-- FOOTER: CONTACTO SIMPLIFICADO -->
+  <footer id="contacto">
+    <div class="footer-content">
+      <div class="footer-item">
+        <h4>UBICACIÓN</h4>
+        <!-- Ahora es un enlace de texto simple -->
+        <a href="https://maps.app.goo.gl/EbhPFfVtge5ghbK4A" target="_blank" class="simple-link">Sucre, Chuquisaca, Barrio 25 de mayo</a>
+      </div>
+      <div class="footer-item">
+        <h4>CONTACTO</h4>
+        <a href="https://wa.me/59173443626" target="_blank" class="simple-link">
+          WhatsApp: +591 73443626
+        </a>
+        <p>Email: <span class="simple-link">contacto@partyeventos.com</span></p>
+      </div>
+      <div class="footer-item">
+        <h4>SÍGUENOS</h4>
+        <!-- TikTok como enlace de texto simple -->
+        <a href="https://www.tiktok.com/@rosmeryauzalupati/video/7611623949851512085?_r=1&_t=ZS-97n2mkEKX0H" target="_blank" class="simple-link">TikTok @PartyEventos</a>
+        <br>
+        <a href="https://www.facebook.com/people/Eventos-Party-RN/61553851875254/" target="_blank" class="simple-link">facebook Eventos Party R&N </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,348 @@
+/* CSS/style.css */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Asegúrate de que el modal esté oculto por defecto */
+#modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+/* La imagen dentro del modal */
+#modal img {
+    max-width: 80%;
+    max-height: 80%;
+    border: 5px solid white;
+}
+
+:root {
+    --terracota-intenso: #e35336;
+    /* Color 1 */
+    --crema-suave: #f5f5dc;
+    /* Color 2 */
+    --naranja-claro: #f4a460;
+    /* Color 3 */
+    --marron-calido: #a0522d;
+    /* Color 4 */
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--crema-suave);
+    color: var(--marron-calido);
+}
+
+/* Header */
+header {
+    background-color: var(--marron-calido);
+    padding: 30px;
+    text-align: center;
+    border-bottom: 5px solid var(--terracota-intenso);
+}
+
+.logo-tienda {
+    width: 350px;
+    transition: filter 0.4s ease;
+}
+
+.logo-tienda:hover {
+    /* Efecto de brillo sutil con el color más claro */
+    filter: drop-shadow(0 0 10px rgba(245, 245, 220, 0.5));
+}
+
+/* Navegación */
+nav {
+    background: var(--marron-calido);
+    padding: 20px;
+    text-align: center;
+}
+
+nav a {
+    color: var(--crema-suave);
+    margin: 0 25px;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid var(--naranja-claro);
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--terracota-intenso);
+    border-color: var(--crema-suave);
+}
+
+/* Sección de Bienvenida (donde irá el contenido) */
+/* Ajuste para que el grid no se rompa */
+.mensaje-bienvenida {
+    display: grid;
+    /* Esto permite que las tarjetas ocupen el espacio necesario y se ajusten solas */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 500px));
+    gap: 40px;
+    /* Aumentamos el espacio entre tarjetas para que no se choquen */
+    justify-content: center;
+    /* Centra las tarjetas cuando hay espacio */
+    padding: 40px 20px;
+}
+
+.mensaje-bienvenida h2 {
+    color: var(--terracota-intenso);
+}
+
+/* Footer: Contacto */
+footer {
+    background-color: var(--marron-calido);
+    color: var(--crema-suave);
+    padding: 40px;
+    text-align: center;
+    border-top: 5px solid var(--terracota-intenso);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-item {
+    margin: 10px;
+}
+
+.footer-item h4 {
+    color: var(--naranja-claro);
+    margin-bottom: 5px;
+}
+
+/* Enlace simple (como se pidió para TikTok y ubicación) */
+.simple-link {
+    color: var(--crema-suave);
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.simple-link:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Fondos específicos */
+.invitacion_15 {
+    width: 500px;
+    height: 600px;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 8px double #c5a059;
+    overflow: hidden;
+    background: url('../IMG/fonfo_15.png') center/cover no-repeat;
+}
+
+.tarjeta_bautizo {
+    width: 500px;
+    height: 600px;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 8px double #cc3232fb;
+    background: url('../IMG/margen_bautiso.png') center/cover no-repeat;
+}
+
+.tarjeta-graduacion {
+    width: 500px;
+    height: 600px;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 8px double #104bb9;
+    background: url('../IMG/fonfo_graduacion.png') center/cover no-repeat;
+}
+
+.invitacion_boda {
+    width: 500px;
+    height: 600px;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 8px double #c5a059;
+    background: url('../IMG/fondo_boda.png') center/cover no-repeat;
+}
+
+/*15*/
+.contenido_15 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Cambiamos a flex-start para que el contenido se mantenga arriba */
+    justify-content: flex-start;
+    padding-top: 5px;
+}
+
+.bloque-inferior_15 {
+    width: 100%;
+    margin-left: 75px;
+    margin-right: auto;
+    margin-top: 35px;
+    color: blueviolet;
+
+
+}
+
+.parrafo_15 {
+    width: 40%;
+    margin-left: 15px;
+    margin-top: 7px;
+}
+
+.cinta_15 {
+    width: 50%;
+    height: 200px;
+    margin-left: 30%;
+    margin-right: auto;
+    margin-top: 35px;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-bottom: 2px solid #c5a059;
+    /* Reducido para subirla */
+    scrollbar-width: none;
+}
+
+/*Bautizo*/
+.contenido_bautizo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Cambiamos a flex-start para que el contenido se mantenga arriba */
+    justify-content: flex-start;
+    padding-top: 47%;
+}
+
+.texto_bautizo {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3px;
+    color: rgb(200, 189, 32);
+}
+
+.cinta_bautizo {
+    width: 50%;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-bottom: 2px solid #c5a059;
+    /* Reducido para subirla */
+    scrollbar-width: none;
+}
+
+/*boda */
+.contenido_boda {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Cambiamos a flex-start para que el contenido se mantenga arriba */
+    justify-content: flex-start;
+    padding-top: 10%;
+}
+
+.cinta_boda {
+    width: 50%;
+    height: 140px;
+    margin-left: 20%;
+    margin-right: auto;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-bottom: 2px solid #c5a059;
+    /* Reducido para subirla */
+    scrollbar-width: none;
+}
+
+.texto-inferior_boda {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 45%;
+    color: rgba(40, 119, 41, 0.722);
+}
+
+.parrafo_boda {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*graduacion*/
+.contenido_graduacion {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Cambiamos a flex-start para que el contenido se mantenga arriba */
+    justify-content: flex-start;
+    padding-top: 18%;
+}
+
+.cinta_graduacion {
+    width: 50%;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-bottom: 2px solid #c5a059;
+    /* Reducido para subirla */
+    scrollbar-width: none;
+}
+
+.texto-graduacion {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4%;
+    color: rgb(203, 222, 204);
+}
+
+.cinta::-webkit-scrollbar {
+    display: none;
+}
+
+.cinta-track {
+    display: inline-flex;
+    animation: slide 25s infinite linear;
+    gap: 25px;
+}
+
+.cinta-track img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
