@@ -45,16 +45,36 @@ body {
 }
 
 /* Header */
-header {
+header,
+footer {
     background-color: var(--marron-calido);
-    padding: 30px;
-    text-align: center;
+    width: 100%;
+    /* El color cubrirá todo el ancho de la pantalla */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border-bottom: 5px solid var(--terracota-intenso);
+    /* Solo para header */
+}
+
+.header-inner,
+.footer-content {
+    width: 100%;
+    max-width: 500px;
+    /* Igual al ancho de tus tarjetas */
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .logo-tienda {
-    width: 350px;
-    transition: filter 0.4s ease;
+    width: 100%;
+    /* Ocupa el ancho disponible */
+    max-width: 350px;
+    /* No supera tu medida original */
+    height: auto;
+    /* Mantiene proporción */
+    margin-bottom: 20px;
+    /* Espacio entre logo y botones */
 }
 
 .logo-tienda:hover {
@@ -65,18 +85,27 @@ header {
 /* Navegación */
 nav {
     background: var(--marron-calido);
-    padding: 20px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Si no caben, bajan a la siguiente línea */
+    gap: 20px;
+    /* Separación fija entre CATÁLOGO y CONTACTO */
+    width: 100%;
 }
 
 nav a {
     color: var(--crema-suave);
-    margin: 0 25px;
+    margin: 0;
+    /* Eliminamos el margen lateral que causaba el problema */
     text-decoration: none;
     font-weight: bold;
     padding: 10px 20px;
     border: 2px solid var(--naranja-claro);
     transition: background-color 0.3s ease;
+    white-space: nowrap;
+    /* Evita que el texto se rompa */
 }
 
 nav a:hover {
@@ -88,13 +117,12 @@ nav a:hover {
 /* Ajuste para que el grid no se rompa */
 .mensaje-bienvenida {
     display: grid;
-    /* Esto permite que las tarjetas ocupen el espacio necesario y se ajusten solas */
-    grid-template-columns: repeat(auto-fit, minmax(320px, 500px));
-    gap: 40px;
-    /* Aumentamos el espacio entre tarjetas para que no se choquen */
+    /* Ajusta a un ancho menor (ej. 280px) para que entren mejor */
+    grid-template-columns: repeat(auto-fit, 280px);
+    gap: 15px;
+    /* Reducimos el espacio entre las tarjetas */
     justify-content: center;
-    /* Centra las tarjetas cuando hay espacio */
-    padding: 40px 20px;
+    padding: 20px 10px;
 }
 
 .mensaje-bienvenida h2 {
@@ -140,43 +168,86 @@ footer {
 
 /* Fondos específicos */
 .invitacion_15 {
-    width: 500px;
-    height: 600px;
-    margin: 20px;
+    width: 350px;
+    /* Reducimos el ancho base de 500px a 350px */
+    height: 420px;
+    /* Reducimos la altura base de 600px a 420px */
+    margin: 20px auto;
     position: relative;
     overflow: hidden;
-    border: 8px double #c5a059;
-    overflow: hidden;
+    border: 6px double #c5a059;
+    /* Ajustamos el borde proporcionalmente */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Esta línea es el truco para escalar el contenido interno */
+    transform: scale(0.7);
+    transform-origin: top center;
+    /* Mantiene la tarjeta alineada arriba */
     background: url('../IMG/fonfo_15.png') center/cover no-repeat;
 }
 
 .tarjeta_bautizo {
-    width: 500px;
-    height: 600px;
-    margin: 20px;
+    width: 350px;
+    /* Reducimos el ancho base de 500px a 350px */
+    height: 420px;
+    /* Reducimos la altura base de 600px a 420px */
+    margin: 20px auto;
     position: relative;
     overflow: hidden;
-    border: 8px double #cc3232fb;
+    border: 6px double #cc3232fb;
+    /* Ajustamos el borde proporcionalmente */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Esta línea es el truco para escalar el contenido interno */
+    transform: scale(0.7);
+    transform-origin: top center;
+    /* Mantiene la tarjeta alineada arriba */
     background: url('../IMG/margen_bautiso.png') center/cover no-repeat;
 }
 
 .tarjeta-graduacion {
-    width: 500px;
-    height: 600px;
-    margin: 20px;
+    width: 350px;
+    /* Reducimos el ancho base de 500px a 350px */
+    height: 420px;
+    /* Reducimos la altura base de 600px a 420px */
+    margin: 20px auto;
     position: relative;
     overflow: hidden;
-    border: 8px double #104bb9;
+    border: 6px double #104bb9;
+    /* Ajustamos el borde proporcionalmente */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Esta línea es el truco para escalar el contenido interno */
+    transform: scale(0.7);
+    transform-origin: top center;
+    /* Mantiene la tarjeta alineada arriba */
     background: url('../IMG/fonfo_graduacion.png') center/cover no-repeat;
 }
 
 .invitacion_boda {
-    width: 500px;
-    height: 600px;
-    margin: 20px;
+    width: 350px;
+    /* Reducimos el ancho base de 500px a 350px */
+    height: 420px;
+    /* Reducimos la altura base de 600px a 420px */
+    margin: 20px auto;
     position: relative;
     overflow: hidden;
-    border: 8px double #c5a059;
+    border: 6px double #c5a059;
+    /* Ajustamos el borde proporcionalmente */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Esta línea es el truco para escalar el contenido interno */
+    transform: scale(0.7);
+    transform-origin: top center;
+    /* Mantiene la tarjeta alineada arriba */
     background: url('../IMG/fondo_boda.png') center/cover no-repeat;
 }
 
@@ -193,9 +264,12 @@ footer {
 
 .bloque-inferior_15 {
     width: 100%;
-    margin-left: 75px;
+    margin-left: 70px;
     margin-right: auto;
     margin-top: 35px;
+    font-size: 0.8rem;
+    /* Reduce de un tamaño estándar a uno más pequeño */
+    margin-bottom: 5px;
     color: blueviolet;
 
 
@@ -203,13 +277,16 @@ footer {
 
 .parrafo_15 {
     width: 40%;
-    margin-left: 15px;
+    margin-left: 1px;
     margin-top: 7px;
+    font-size: 0.7rem;
+    /* Reduce de un tamaño estándar a uno más pequeño */
+    margin-bottom: 5px;
 }
 
 .cinta_15 {
-    width: 50%;
-    height: 200px;
+    width: 200px;
+    height: 100px;
     margin-left: 30%;
     margin-right: auto;
     margin-top: 35px;
@@ -237,11 +314,21 @@ footer {
     margin-right: auto;
     margin-top: 3px;
     color: rgb(200, 189, 32);
+    font-size: 0.7rem;
+    /* Reduce de un tamaño estándar a uno más pequeño */
+    margin-bottom: 5px;
 }
-
+.parrafo_bautizo{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3px;
+    color: rgb(200, 189, 32);
+    font-size: 0.7rem;
+}
 .cinta_bautizo {
-    width: 50%;
-    height: 150px;
+    width: 200px;
+    height: 100px;
     margin-left: auto;
     margin-right: auto;
     overflow-x: auto;
@@ -263,8 +350,8 @@ footer {
 }
 
 .cinta_boda {
-    width: 50%;
-    height: 140px;
+    width: 200px;
+    height: 100px;
     margin-left: 20%;
     margin-right: auto;
     overflow-x: auto;
@@ -278,8 +365,11 @@ footer {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 45%;
+    margin-top: 35%;
     color: rgba(40, 119, 41, 0.722);
+    font-size: 0.8rem;
+    /* Reduce de un tamaño estándar a uno más pequeño */
+    margin-bottom: 5px;
 }
 
 .parrafo_boda {
@@ -300,8 +390,8 @@ footer {
 }
 
 .cinta_graduacion {
-    width: 50%;
-    height: 150px;
+    width: 200px;
+    height: 100px;
     margin-left: auto;
     margin-right: auto;
     overflow-x: auto;
@@ -317,6 +407,9 @@ footer {
     margin-right: auto;
     margin-top: 4%;
     color: rgb(203, 222, 204);
+    font-size: 0.9rem;
+    /* Reduce de un tamaño estándar a uno más pequeño */
+    margin-bottom: 5px;
 }
 
 .cinta::-webkit-scrollbar {
@@ -330,8 +423,8 @@ footer {
 }
 
 .cinta-track img {
-    width: 300px;
-    height: 200px;
+    width: 200px;
+    height: 100px;
     object-fit: cover;
     cursor: pointer;
     border-radius: 8px;
